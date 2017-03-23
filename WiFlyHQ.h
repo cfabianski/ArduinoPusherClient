@@ -55,7 +55,11 @@
 
 #include <Arduino.h>
 #include <Stream.h>
+#if (defined(__AVR__))
 #include <avr/pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
 #include <IPAddress.h>
 
 /* IP Protocol bits */
